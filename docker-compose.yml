@@ -1,0 +1,29 @@
+version: "3"
+services:
+  client:
+    image: property-app-client
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    networks:
+      - property-app
+  server:
+    image: property-app-api-server
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+    networks:
+    - property-app
+  mongo:
+    image: mongo:5.0
+    ports:
+      - "27017:27017"
+    networks:
+      - property-app
+networks:
+  property-app:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local

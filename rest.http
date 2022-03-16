@@ -1,0 +1,38 @@
+GET http://localhost:8000
+
+###
+
+POST http://localhost:8000/api/property HTTP/1.1
+content-type: application/json
+
+{
+    "type": "Apartment",
+    "suburb": "City Centre (Auckland City)",
+    "location": "Auckland City , City Centre (Auckland City) , 1010",
+    "price": 345,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "available": "now",
+    "images": ["https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053204_APM53204_0.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053205_APM53205_2.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053201_APM53201_3.jpg"]
+  }
+
+###
+
+PUT http://localhost:8000/api/property/622d91c1e494841b4ec15021 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Spider-Man: No Way Home",
+    "time": ["12:00", "14:15", "16:00", "21:30", "23:00"],
+    "rating": 8.7
+}
+
+###
+
+DELETE http://localhost:8000/api/property/622d93487ac1a1ebe18be155
+
+###
+GET http://localhost:8000/api/properties
+
+###
+GET http://localhost:8000/api/property/622f08def09fccfc3b297530

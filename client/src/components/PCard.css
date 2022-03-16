@@ -1,0 +1,12 @@
+.card-image {
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-body:hover {
+  box-shadow: 0 2px 5px gray;
+}
+
+.card {
+  cursor: pointer;
+}

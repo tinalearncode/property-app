@@ -1,0 +1,18 @@
+$theme-colors: (
+  'primary': #bf163d,
+  'Secondary': #d77589,
+  'Light': white
+);
+
+$colors: (
+  'gray': #949494,
+  'light-pink': #e8dbdf
+);
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@import 'node_modules/bootstrap/scss/bootstrap';
