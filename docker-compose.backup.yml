@@ -1,20 +1,25 @@
 version: "3"
 services:
   client:
-    build: ./client 
     image: property-app-client
     stdin_open: true
     ports:
       - "3000:3000"
-    environment:
-      - PORT=3000
     networks:
       - property-app
+    volumes:
+      - type: bind
+        source: ./client
+        target: /app
   server:
     build: ./server
     image: property-app-api-server
     ports:
       - "4000:4000"
+    volumes:
+      - type: bind
+        source: ./server
+        target: /app
     env_file:
       - ./server/.env
     depends_on:
