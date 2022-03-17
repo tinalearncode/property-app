@@ -1,0 +1,52 @@
+[
+  {
+    "type": "House",
+    "suburb": "Blockhouse Bay",
+    "location": "4 Heaphy Street , Blockhouse Bay , 600",
+    "price": 850,
+    "bedrooms": 5,
+    "bathrooms": 1,
+    "available": "2022-4-24",
+    "images": ["https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI055288_APM55288_0.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI055274_APM55274_4.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI055265_APM55265_12.jpg"]
+  },
+  {
+    "type": "House",
+    "suburb": "Albany",
+    "location": "12 Mulu Place , Albany , 632",
+    "price": 990,
+    "bedrooms": 5,
+    "bathrooms": 2,
+    "available": "now",
+    "images": ["https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI037353_APM37353_0.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI037350_APM37350_1.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI037352_APM37352_5.jpg"]
+  },
+  {
+    "type": "Apartment",
+    "suburb": "Newmarket",
+    "location": "C716/176 Broadway , Newmarket , 1023",
+    "price": 530,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "available": "2022-4-25",
+    "images": ["https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI054956_APM54956_4.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI054949_APM54949_2.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI054953_APM54953_1.jpg"]
+  },
+  {
+    "type": "Apartment",
+    "suburb": "Newmarket",
+    "location": "9/118 Broadway , Newmarket , 1023",
+    "price": 660,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "available": "2022-5-20",
+    "images": ["https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI011363_APM11363_0.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI011372_APM11372_9.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI011365_APM11365_2.jpg"]
+  },
+  {
+    "type": "Apartment",
+    "suburb": "City Centre (Auckland City)",
+    "location": "Auckland City , City Centre (Auckland City) , 1010",
+    "price": 345,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "available": "now",
+    "images": ["https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053204_APM53204_0.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053205_APM53205_2.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053201_APM53201_3.jpg"]
+  }
+]

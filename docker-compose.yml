@@ -7,23 +7,36 @@ services:
       - "3000:3000"
     networks:
       - property-app
+    volumes:
+      - type: bind
+        source: ./client
+        target: /app
   server:
+    build: ./server
     image: property-app-api-server
     ports:
-      - "8000:8000"
+      - "4000:4000"
+    volumes:
+      - type: bind
+        source: ./server
+        target: /app
+    env_file:
+      - ./server/.env
     depends_on:
-      - mongo
+      - db
     networks:
     - property-app
-  mongo:
-    image: mongo:5.0
+  db:
+    image: mongo
     ports:
-      - "27017:27017"
+      - "27018:27017"
     networks:
       - property-app
+    volumes:
+      - mongodb:/data/db
 networks:
   property-app:
     driver: bridge
 volumes:
-  mongo-data:
+  mongodb:
     driver: local

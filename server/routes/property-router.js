@@ -6,6 +6,7 @@ router.post('/property', PropertyCtrl.createProperty);
 router.put('/property/:id', PropertyCtrl.updateProperty);
 router.delete('/property/:id', PropertyCtrl.deleteProperty);
 router.get('/property/:id', PropertyCtrl.getPropertyById);
-router.get('/properties', PropertyCtrl.getPropertys);
+router.get('/properties', PropertyCtrl.getProperties);
+router.get('/seeddata', PropertyCtrl.seedData);
 
 module.exports = router;

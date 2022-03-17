@@ -2,7 +2,7 @@ GET http://localhost:8000
 
 ###
 
-POST http://localhost:8000/api/property HTTP/1.1
+POST http://localhost:4000/api/property HTTP/1.1
 content-type: application/json
 
 {
@@ -32,7 +32,34 @@ content-type: application/json
 DELETE http://localhost:8000/api/property/622d93487ac1a1ebe18be155
 
 ###
-GET http://localhost:8000/api/properties
+GET http://localhost:4000/api/properties
 
 ###
 GET http://localhost:8000/api/property/622f08def09fccfc3b297530
+
+###
+POST http://localhost:4000/api/seeddata HTTP/1.1
+content-type: application/json
+
+[
+  {
+    "type": "Unit",
+    "suburb": "Albany",
+    "location": "14 Mulu Place , Albany , 632",
+    "price": 560,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "available": "now",
+    "images": ["https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI037353_APM37353_0.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI037350_APM37350_1.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI037352_APM37352_5.jpg"]
+  },
+  {
+    "type": "Unit",
+    "suburb": "Newmarket",
+    "location": "C516/176 Broadway , Newmarket , 1023",
+    "price": 600,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "available": "2022-4-27",
+    "images": ["https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI054956_APM54956_4.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI054949_APM54949_2.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI054953_APM54953_1.jpg"]
+  }
+]

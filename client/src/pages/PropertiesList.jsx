@@ -28,10 +28,11 @@ const PropertiesList = () => {
     const fetchData = async () => {
       const data = await api.getAllProperties();
       setProperties(data.data.data);
+      console.log(data);
       setIsLoading(false);
     };
 
-    fetchData().catch(console.error);
+    fetchData().catch(error => console.log(`this is fetch error: ${error}`));
   }, []);
 
   return (
