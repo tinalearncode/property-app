@@ -1,0 +1,30 @@
+{
+  "family": "PropertyAppTask",
+  "requiresCompatibilities": ["EC2"],
+  "memory": "1024",
+  "cpu": "1024",
+
+  "containerDefinitions": [
+    {
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "protocol": "tcp",
+          "containerPort": 80
+        }
+      ],
+      "image": "property-app-nginx:latest",
+      "name": "property-app-nginx"
+    },
+    {
+      "memoryReservation": 400,
+      "image": "property-app-client:latest",
+      "name": "property-app-client"
+    },
+    {
+      "memoryReservation": 400,
+      "image": "property-app-backend:latest",
+      "name": "property-app-backend"
+    }
+  ]
+}
