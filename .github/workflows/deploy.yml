@@ -33,15 +33,13 @@ jobs:
         uses: aws-actions/amazon-ecr-login@aaf69d68aa3fb14c1d5a6be9ac61fe15b48453a2
 
       - name: Build, tag, and push image to Amazon ECR
-        uses: nyakaz73/aws-ecr-deploy@v0.08
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
-        with:
-          access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          use_compose: true
+        run: |
+          docker-compose build $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker-compose push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Amazon ECS task definition
         id: task-def
