@@ -39,9 +39,6 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
         with:
           use_compose: true
-        run: |
-          docker-compose build $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker-compose push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Amazon ECS task definition
         id: task-def
