@@ -1,20 +1,43 @@
 version: "3.3"
 services:
-  niginx:
+  nginx:
+    image: property-app-nginx
     build:
       dockerfile: Dockerfile
       context: ./nginx
     ports:
       - "80:80"
+    links:
+      - client
+      - backend
+    depends_on:
+      - cliend
+      - backend
+    restart: always
   client:
     build:
       dockerfile: Dockerfile
       context: ./client
     container_name: property-client
-  server:
+    image: property-app-client
+  backend:
+    links: 
+      - mongo
+    depends_on:
+      - mongo
     build:
       dockerfile: Dockerfile
       context: ./server
-    container_name: property-server
+    container_name: property-backend
+    image: property-app-api-server
     env_file:
       - ./server/.env
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
+    container_name: property-app-mongodb
+
+    

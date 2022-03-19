@@ -1,8 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const apiPort = 8000;
 require('dotenv').config();
+
+const apiPort = process.env.PORT || 4000;
 
 const db = require('./db');
 const propertyRouter = require('./routes/property-router');
