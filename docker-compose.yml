@@ -27,8 +27,5 @@ services:
       context: ./server
     container_name: property-app-backend
     image: property-app-backend
-    env_file:
-      - ./server/.env
-
 
     
