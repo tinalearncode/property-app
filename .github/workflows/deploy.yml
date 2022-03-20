@@ -37,12 +37,10 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         run: |
-          docker build $ECR_REGISTRY/property-app-backend:latest
-          docker build $ECR_REGISTRY/property-app-client:latest
-          docker build $ECR_REGISTRY/property-app-nginx:latest
-          docker push $ECR_REGISTRY/property-app-backend:latest
-          docker push $ECR_REGISTRY/property-app-client:latest
-          docker push $ECR_REGISTRY/property-app-nginx:latest
+          docker-compose build
+          docker push property-app-backend:latest
+          docker push property-app-client:latest
+          docker push property-app-nginx:latest
 
       - name: Amazon ECS task definition
         id: task-def
