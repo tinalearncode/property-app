@@ -14,17 +14,17 @@
         }
       ],
       "memoryReservation": 200,
-      "image": "property-app-nginx:latest",
+      "image": "823955147616.dkr.ecr.ap-southeast-2.amazonaws.com/property-app-nginx:latest",
       "name": "property-app-nginx"
     },
     {
       "memoryReservation": 300,
-      "image": "property-app-client:latest",
+      "image": "823955147616.dkr.ecr.ap-southeast-2.amazonaws.com/property-app-client:latest",
       "name": "property-app-client"
     },
     {
       "memoryReservation": 400,
-      "image": "property-app-backend:latest",
+      "image": "823955147616.dkr.ecr.ap-southeast-2.amazonaws.com/property-app-backend:latest",
       "name": "property-app-backend"
     }
   ]
