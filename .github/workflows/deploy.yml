@@ -37,7 +37,9 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         run: |
-          docker-compose build
+          docker build $ECR_REGISTRY/property-app-backend:latest
+          docker build $ECR_REGISTRY/property-app-client:latest
+          docker build $ECR_REGISTRY/property-app-nginx:latest
           docker push $ECR_REGISTRY/property-app-backend:latest
           docker push $ECR_REGISTRY/property-app-client:latest
           docker push $ECR_REGISTRY/property-app-nginx:latest
