@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   nginx:
-    image: ${{ secrets.ECR_REGISTRY }}/property-app-nginx:latest
+    image: ${{ secrets.ECR_REGISTRY }}/property-app-nginx
     container_name: property-app-nginx
     build:
       dockerfile: Dockerfile
@@ -20,12 +20,12 @@ services:
       dockerfile: Dockerfile
       context: ./client
     container_name: property-app-client
-    image: ${{ secrets.ECR_REGISTRY }}/property-app-client:latest
+    image: ${{ secrets.ECR_REGISTRY }}/property-app-client
   backend:
     build:
       dockerfile: Dockerfile
       context: ./server
     container_name: property-app-backend
-    image: ${{ secrets.ECR_REGISTRY }}/property-app-backend:latest
+    image: ${{ secrets.ECR_REGISTRY }}/property-app-backend
 
     
