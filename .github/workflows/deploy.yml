@@ -38,9 +38,9 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         run: |
           docker-compose build
-          docker push property-app-backend:latest
-          docker push property-app-client:latest
-          docker push property-app-nginx:latest
+          docker push 823955147616.dkr.ecr.ap-southeast-2.amazonaws.com/property-app-backend:latest
+          docker push 823955147616.dkr.ecr.ap-southeast-2.amazonaws.com/property-app-client:latest
+          docker push 823955147616.dkr.ecr.ap-southeast-2.amazonaws.com/property-app-nginx:latest
 
       - name: Amazon ECS task definition
         id: task-def
