@@ -1,7 +1,7 @@
 {
   "family": "PropertyAppTask",
   "requiresCompatibilities": ["EC2"],
-  "memory": "1024",
+  "memory": "900",
   "cpu": "1024",
 
   "containerDefinitions": [
@@ -18,7 +18,7 @@
       "name": "property-app-nginx"
     },
     {
-      "memoryReservation": 400,
+      "memoryReservation": 300,
       "image": "property-app-client:latest",
       "name": "property-app-client"
     },
