@@ -9,7 +9,7 @@ env:
   AWS_REGION: ap-southeast-2
   ECR_REPOSITORY: property-app
   ECS_SERVICE: PropertyAppService
-  ESC_CLUSTER: PropertyAppCluster
+  ECS_CLUSTER: PropertyAppCluster
   ECS_TASK_DEFINITION: task-definition.json
 
 jobs:
