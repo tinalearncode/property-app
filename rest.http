@@ -2,23 +2,22 @@ GET http://localhost:8000
 
 ###
 
-POST http://localhost/api/property HTTP/1.1
+POST http://localhost:8080/backend/api/property HTTP/1.1
 content-type: application/json
 
 {
     "type": "Apartment",
-    "suburb": "City Centre (Auckland City)",
-    "location": "Auckland City , City Centre (Auckland City) , 1010",
-    "price": 345,
-    "bedrooms": 1,
+    "suburb": "Brownsbay",
+    "location": "103 northshort , Brownsbay , 1420",
+    "price": 530,
+    "bedrooms": 2,
     "bathrooms": 1,
     "available": "now",
-    "images": ["https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053204_APM53204_0.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053205_APM53205_2.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053201_APM53201_3.jpg"]
+    "images": ["https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053201_APM53201_3.jpg","https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053204_APM53204_0.jpg", "https://www.aucklandproperty.net/wp-content/uploads/properties/RBPI053205_APM53205_2.jpg" ]
   }
-
 ###
 
-PUT http://localhost:8000/api/property/622d91c1e494841b4ec15021 HTTP/1.1
+PUT http://localhost:8080/api/property/622d91c1e494841b4ec15021 HTTP/1.1
 content-type: application/json
 
 {

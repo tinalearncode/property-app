@@ -1,13 +1,13 @@
 version: "3.3"
 services:
   nginx:
-    image: 823955147616.dkr.ecr.ap-southeast-2.amazonaws.com/property-app-nginx
+    image: property-app-nginx
     container_name: property-app-nginx
     build:
       dockerfile: Dockerfile
       context: ./nginx
     ports:
-      - "80:80"
+      - "8080:80"
     links:
       - client
       - backend
@@ -20,12 +20,19 @@ services:
       dockerfile: Dockerfile
       context: ./client
     container_name: property-app-client
-    image: 823955147616.dkr.ecr.ap-southeast-2.amazonaws.com/property-app-client
+    image: property-app-client
   backend:
     build:
       dockerfile: Dockerfile
       context: ./server
     container_name: property-app-backend
-    image: 823955147616.dkr.ecr.ap-southeast-2.amazonaws.com/property-app-backend
-
-    
+    image: property-app-backend
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    container_name: property-app-mongo
+    ports:
+      - "27018:27017"
+    volumes:
+     - /data/db:/data/db
